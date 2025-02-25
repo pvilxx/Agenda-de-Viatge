@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <header>
+        <h1>Clients</h1>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="../rutas/presentacion.html">Sobre el alumno</a></li>
+                <li><a href="../rutas/clientes.html">Clientes</a></li>
+            </ul>
+        </nav>
+    </header>
+<body>
+
+    <h1>Gestió de Clients</h1>
+
+    <form id="clientForm">
+        <input type="hidden" id="clientId">
+        <label>Nom:</label>
+        <input type="text" id="nom" required>
+        
+        <label>Cognoms:</label>
+        <input type="text" id="cognoms" required>
+        
+        <label>Telèfon:</label>
+        <input type="text" id="telefon" required>
+        
+        <label>Correu electrònic:</label>
+        <input type="email" id="correu" required>
+        
+        <label>Destí de viatge:</label>
+        <input type="text" id="desti" required>
+        
+        <button type="submit">Desar</button>
+    </form>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nom</th>
+                <th>Cognoms</th>
+                <th>Telèfon</th>
+                <th>Correu</th>
+                <th>Destí</th>
+                <th>Accions</th>
+            </tr>
+        </thead>
+        <tbody id="clientsTableBody">
+            <!-- Aquí se insertarán los clientes -->
+        </tbody>
+    </table>
+
+    <script src="../script.js"></script>
+</body>
+</html>
