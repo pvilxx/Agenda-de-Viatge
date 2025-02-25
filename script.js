@@ -71,3 +71,16 @@ async function eliminarClient(id) {
         carregarClients();
     }
 }
+
+document.getElementById('searchInput').addEventListener('input', () => {
+    const searchValue = document.getElementById('searchInput').value.toLowerCase();
+    const rows = document.querySelectorAll('#clientsTableBody tr');
+
+    rows.forEach(row => {
+        const nameCell = row.querySelector('td:nth-child(2)');
+        if (nameCell) {
+            const name = nameCell.textContent.toLowerCase();
+            row.style.display = name.includes(searchValue) ? '' : 'none';
+        }
+    });
+});
